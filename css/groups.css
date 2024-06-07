@@ -1,0 +1,292 @@
+:root {
+    --cosgear-1: #0c081a;
+    --cosgear-2: rgb(255 199 0);
+    --cosgear-3: rgb(32 29 51);
+    --cosgear-4: #D35079;
+    --cosgear-5: #f1f1f1;
+}
+
+body {
+    background-color: var(--cosgear-1);
+    color: var(--cosgear-5);
+    font-size: 16px;
+    padding: 8px;
+}
+
+.header {
+    position: sticky;
+    top: 0px;
+    padding-top: 16px;
+    height: fit-content;
+    padding: 0px 8px;
+    background: var(--cosgear-1);
+    vertical-align: middle;
+}
+
+    .header i {
+        font-size: 24px;
+        vertical-align: middle;
+    }
+
+    .header .action {
+        float: right;
+        vertical-align: middle;
+    }
+
+        .header .action:hover {
+            color: var(--cosgear-4);
+        }
+
+.btn-cosgear {
+    background: var(--cosgear-2);
+    color: var(--cosgear-1);
+    width: fit-content;
+}
+
+    .btn-cosgear .bxs-down-arrow {
+        font-size: 12px;
+    }
+
+    .btn-cosgear:hover, .btn-cosgear:focus {
+        background-color: var(--cosgear-4);
+    }
+
+.top-nav {
+    position: sticky;
+    background: var(--cosgear-1);
+}
+
+.scroll-container {
+    height: fit-content;
+    max-height: 85vh;
+    overflow-y: auto;
+}
+
+.nav-underline {
+    max-width: 100vw;
+    padding: 8px;
+    justify-content: space-between;
+    margin-left: auto;
+    margin-right: auto;
+    border-bottom: 1px solid grey;
+}
+
+    .nav-underline .nav-link {
+        color: var(--cosgear-5);
+    }
+
+        .nav-underline .nav-link.active {
+            color: var(--cosgear-5);
+            border-bottom: 2px solid var(--cosgear-2);
+        }
+
+/* Feed Styling */
+.post-ghost {
+    color: var(--cosgear-5);
+    display: flex;
+    opacity: 0.75;
+    position: relative;
+}
+
+.post-card {
+    background: var(--cosgear-3);
+    padding: 12px;
+    padding-top: 4px;
+    border-radius: 8px;
+    margin-bottom: 8px;
+    text-align: left;
+    font-size: 14px;
+}
+
+    .post-card .post-header {
+        margin-top: 10px;
+        vertical-align: middle;
+    }
+
+        .post-card .post-header p {
+            padding: 0;
+        }
+
+    .post-card .post-time {
+        float: right;
+    }
+
+    .post-card .avatar {
+        vertical-align: middle;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        margin-right: 4px;
+    }
+
+    /* Content Toggling Controls */
+    .post-card .hideContent {
+        max-height: 180px;
+        overflow: hidden;
+        line-height: 1em;
+        height: 2em;
+        /* Set Transitions */
+        transition: max-height 0.1s;
+    }
+
+    .post-card .showContent {
+        line-height: 1em;
+        height: fit-content;
+    }
+
+    .post-card .show-more {
+        padding: 10px 0;
+        text-align: center;
+    }
+
+    /* Image Styling */
+
+    /* Slideshow container */
+    .post-card .slideshow-container {
+        max-height: 600px;
+        max-width: 90vw;
+        position: relative;
+    }
+
+    /* Next & previous buttons */
+    .post-card .prev, .post-card .next {
+        cursor: pointer;
+        position: absolute;
+        top: 50%;
+        width: auto;
+        padding: 16px;
+        margin-top: -22px;
+        color: var(--cosgear-5);
+        font-weight: bold;
+        font-size: 18px;
+        transition: 0.6s ease;
+        border-radius: 0 3px 3px 0;
+        user-select: none;
+        text-decoration: none;
+    }
+
+    /* Position the "next button" to the right */
+    .post-card .next {
+        right: 0;
+        border-radius: 3px 0 0 3px;
+    }
+
+    .post-card img {
+        max-width: 100%;
+        vertical-align: middle;
+    }
+
+    .post-card .numbertext {
+        text-align: center;
+    }
+
+    /* Post Action Buttons */
+    .post-card .post-action {
+        text-decoration: none;
+        color: var(--cosgear-5);
+        vertical-align: middle;
+        margin: 4px;
+    }
+
+        .post-card.post-action i {
+            font-size: 20px;
+        }
+
+/* Back To Top Button */
+#myBtn {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    z-index: 99;
+    font-size: 18px;
+    border: none;
+    outline: none;
+    background-color: var(--cosgear-2);
+    color: var(--cosgear-1);
+    cursor: pointer;
+    padding: 8px 12px;
+    border-radius: 12px;
+}
+
+    #myBtn:hover {
+        background-color: var(--cosgear-4);
+    }
+
+/* Toolbar Styling */
+#toolbar {
+    margin: 8px;
+    text-align: left;
+}
+
+    #toolbar .dropdown {
+        position: relative;
+        display: inline-block;
+        border-radius: 8px;
+    }
+
+    #toolbar .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: var(--cosgear-5);
+        color: var(--cosgear-1);
+        width: fit-content;
+        min-width: 300px;
+        z-index: 1;
+        border: 1px solid var(--cosgear-1);
+        border-radius: 8px;
+        font-weight: 400;
+        max-height: 50vh;
+        overflow-x: auto;
+        padding: 6px;
+    }
+
+        #toolbar .dropdown-content a {
+            color: var(--cosgear-1);
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+    #toolbar .dropdown a:hover {
+        background-color: #ddd;
+    }
+
+    #toolbar .dropdown-content .dropdown-filters {
+        padding: 8px;
+    }
+
+    #toolbar .dropdown-content .scroll-container {
+        max-height: 100px;
+        overflow-x: auto;
+        border: 1px solid var(--cosgear-1);
+        padding: 4px;
+        border-radius: 8px;
+    }
+
+.show {
+    display: block !important;
+}
+
+.hide {
+    display: none;
+}
+
+/* My Groups Styling */
+#myGroups .card {
+    background: var(--cosgear-3);
+    color: var(--cosgear-5);
+    vertical-align: middle;
+    margin: 6px 0px;
+}
+
+    #myGroups .card img {
+        float: left;
+        max-height: 15vh;
+        max-width: 15vw;
+        margin-right: 8px;
+    }
+
+    #myGroups .card .card-body {
+        display: inline-block;
+    }
