@@ -1,0 +1,77 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    int groupNumber = 8;
+}
+<section class="container scroll-container" onscroll="scrollFunction('groupsContainer')" id="groupsContainer">
+
+    <!-- Mid Level Tools -->
+    <div id="toolbar">
+
+        <!-- Example single danger button -->
+        <div class="dropdown">
+            <button onclick="toggleDropdown('groupsFilters')" class="btn btn-cosgear">
+                <i class='bx bx-filter-alt'></i>
+                <i class='bx bxs-down-arrow'></i>
+            </button>
+            <div id="groupsFilters" class="dropdown-content">
+
+                <!-- Order By -->
+                <div class="dropdown-filters">
+                    <em>Order By...</em>
+                    <div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="alphAsc" value="alphAsc">
+                            <label class="form-check-label" for="alphAsc">Alphabetical (A to Z)</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="alphDesc" value="alphDesc">
+                            <label class="form-check-label" for="alphDesc">Alphabetical (Z to A)</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="sortCheck1" value="sort1">
+                            <label class="form-check-label" for="sortCheck1">Newest First</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="sortCheck2" value="sort2">
+                            <label class="form-check-label" for="sortCheck2">Oldest First</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="sortCheck3" value="sort3">
+                            <label class="form-check-label" for="sortCheck3">Most Activity First</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="sortCheck4" value="sort4">
+                            <label class="form-check-label" for="sortCheck4">Least Activity First</label>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <button class="btn btn-cosgear" type="button" onclick="toggleDropdown('groupsFilters')">Apply</button>
+                    <button class="btn btn-outline-secondary" type="button" onclick="toggleDropdown('groupsFilters')">Cancel</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Group Lists -->
+    <div>
+        @for (int i = 0; i < groupNumber; i++)
+        {
+            <div class="card">
+                <div class="card-body d-inline-flex">
+                    <img src="imgs/myGroups/group1.jpeg" alt="...">
+                    <div class="d-inline">
+                        <h3>Group @i</h3>
+                        This is some text within a card body.
+                    </div>
+                </div>
+            </div>
+        }
+
+    </div>
+
+</section>

@@ -1,0 +1,272 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    int groupNumber = 8;
+}
+<section class="text-center container scroll-container" onscroll="scrollFunction('postContainer')" id="postContainer">
+
+    <!-- Mid Level Tools -->
+    <div id="toolbar">
+
+        <!-- Example single danger button -->
+        <div class="dropdown">
+            <button onclick="toggleDropdown('feedFilters')" class="btn btn-cosgear">
+                <i class='bx bx-filter-alt'></i>
+                <i class='bx bxs-down-arrow'></i>
+            </button>
+            <div id="feedFilters" class="dropdown-content">
+
+                <!-- Group Filters -->
+                <div class="dropdown-filters">
+                    <em>Show Posts From...</em>
+                    <div class="scroll-container">
+                        @for (int i = 0; i < groupNumber; i++)
+                        {
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="checkbox" id="groupCheck-@i" value="group-@i">
+                                <label class="form-check-label" for="groupCheck-@i">Group @i</label>
+                            </div>
+                        }
+
+                    </div>
+                </div>
+
+                <!-- Order By -->
+                <div class="dropdown-filters">
+                    <em>Order By...</em>
+                    <div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="sortCheck1" value="sort1">
+                            <label class="form-check-label" for="sortCheck1">Newest First</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="sortCheck2" value="sort2">
+                            <label class="form-check-label" for="sortCheck2">Oldest First</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="sortCheck3" value="sort3">
+                            <label class="form-check-label" for="sortCheck3">Most Activity First</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="sortCheck4" value="sort4">
+                            <label class="form-check-label" for="sortCheck4">Least Activity First</label>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sort By -->
+                <div class="dropdown-filters">
+                    <em>Category</em>
+                    <div class="scroll-container">
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="category1">
+                            <label class="form-check-label" for="inlineCheckbox1">Help Request</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="category2">
+                            <label class="form-check-label" for="inlineCheckbox2">WIP Hype</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="category3">
+                            <label class="form-check-label" for="inlineCheckbox3">Standard</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="inlineCheckbox4" value="category4">
+                            <label class="form-check-label" for="inlineCheckbox4">Showcase</label>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <button class="btn btn-cosgear" type="button" onclick="toggleDropdown()">Apply</button>
+                    <button class="btn btn-outline-secondary" type="button" onclick="toggleDropdown()">Cancel</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Posts -->
+    <div class="container text-start">
+        <div class="row">
+            @for (int i = 0; i < 2; i++)
+            {
+                <!-- Post With No Images -->
+                <div class="col-sm">
+                    <div class="post-card ">
+                        <em class="post-ghost post-time">1d ago</em>
+                        <div class="d-inline">
+                            <img src="imgs/avatar.png" alt="Avatar" class="avatar d-inline-block">
+                            <div class="post-header d-inline-block">
+                                <em><b>@@username</b> need helps with...</em>
+                                <p>This Totally Awesome Cosplay</p>
+                            </div>
+                        </div>
+
+                        <div>
+                            <h5 class="card-title">Post with No Images</h5>
+                            <div class="content hideContent">
+                                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore
+                                magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd
+                                gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing
+                                elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
+
+                                <p>Some more text</p>
+                                <ul>
+                                    <li>Some more text</li>
+                                    <li>Some more text</li>
+                                    <li>Some more text</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <a class="post-ghost show-more" href="#">Show more</a>
+                            </div>
+                        </div>
+
+                        <div>
+                            <!-- Hype Button -->
+                            <a href="#" class="post-action">
+                                <i class='bx bxs-hot'></i>
+                                15
+                            </a>
+
+                            <!-- Comment Button -->
+                            <a href="#" class="post-action">
+                                <i class='bx bx-comment-detail'></i>
+                                2
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Post With Multiple Images -->
+                <div class="col-sm">
+                    <div class="post-card">
+                        <em class="post-ghost post-time">1d ago</em>
+                        <div class="d-inline">
+                            <img src="imgs/avatar.png" alt="Avatar" class="avatar d-inline-block">
+                            <div class="post-header d-inline-block">
+                                <em><b>@@username</b> need helps with...</em>
+                                <p>This Totally Awesome Cosplay</p>
+                            </div>
+                        </div>
+
+                        <div>
+                            <!-- Image Slide Show -->
+                            <div class="slideshow-container">
+
+                                <div class="postImage">
+                                    <img src="imgs/posts/multi-3.jpg">
+                                    <div class="text">Caption Text for this image</div>
+                                    <div class="numbertext">1 / 3</div>
+                                </div>
+
+                                <div class="postImage">
+                                    <img src="imgs/posts/multi-1.jpg">
+                                    <div class="text">Captioning this image as well</div>
+                                    <div class="numbertext">2 / 3</div>
+                                </div>
+
+                                <div class="postImage">
+                                    <img src="imgs/posts/multi-2.jpg">
+                                    <div class="text">Yet another caption</div>
+                                    <div class="numbertext">3 / 3</div>
+                                </div>
+
+                                <a class="prev" onclick="plusSlides(-1)">❮</a>
+                                <a class="next" onclick="plusSlides(1)">❯</a>
+
+                            </div>
+
+                            <h5 class="card-title">Post With Multiple Images</h5>
+                            <div class="content hideContent">
+                                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore
+                                magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd
+                                gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing
+                                elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
+
+                                <p>Some more text</p>
+                                <ul>
+                                    <li>Some more text</li>
+                                    <li>Some more text</li>
+                                    <li>Some more text</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <a class="post-ghost show-more" href="#">Show more</a>
+                            </div>
+                        </div>
+
+                        <div>
+                            <!-- Hype Button -->
+                            <a href="#" class="post-action">
+                                <i class='bx bxs-hot'></i>
+                                15
+                            </a>
+
+                            <!-- Comment Button -->
+                            <a href="#" class="post-action">
+                                <i class='bx bx-comment-detail'></i>
+                                2
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Post With One Image -->
+                <div class="col-sm">
+                    <div class="post-card">
+                        <em class="post-ghost post-time">1d ago</em>
+                        <div class="d-inline">
+                            <img src="imgs/avatar.png" alt="Avatar" class="avatar d-inline-block">
+                            <div class="post-header d-inline-block">
+                                <em><b>@@username</b> need helps with...</em>
+                                <p>This Totally Awesome Cosplay</p>
+                            </div>
+                        </div>
+
+                        <div>
+                            <img src="imgs/posts/single-1.jpg" />
+                            <h5 class="card-title">Post With One Image</h5>
+                            <div class="content hideContent">
+                                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore
+                                magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd
+                                gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing
+                                elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
+
+                                <p>Some more text</p>
+                                <ul>
+                                    <li>Some more text</li>
+                                    <li>Some more text</li>
+                                    <li>Some more text</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <a class="post-ghost show-more" href="#">Show more</a>
+                            </div>
+                        </div>
+
+                        <div>
+                            <!-- Hype Button -->
+                            <a href="#" class="post-action">
+                                <i class='bx bxs-hot'></i>
+                                15
+                            </a>
+
+                            <!-- Comment Button -->
+                            <a href="#" class="post-action">
+                                <i class='bx bx-comment-detail'></i>
+                                2
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</section>
+
+<script src="js/groups.js"></script>
+<script src="js/scrollToTop.js"></script>
+<script src="js/postSlideshow.js"></script>
