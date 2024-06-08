@@ -18,7 +18,7 @@ namespace Prototype.Controllers
             return View();
         }
 
-        public IActionResult Privacy()
+        public IActionResult GroupView()
         {
             return View();
         }

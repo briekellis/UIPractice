@@ -1,17 +1,17 @@
 ﻿/* My Groups Styling */
-#myGroups {
+#myGroups, #cosplays {
     max-width: 95vw;
     width: 100%;
 }
 
-    #myGroups .card {
+    #myGroups .card, #cosplays .card {
         background: var(--cosgear-3);
         color: var(--cosgear-5);
         vertical-align: middle;
         margin: 4px 0px;
     }
 
-        #myGroups .card img {
+        #myGroups .card img, #cosplays .card img {
             float: left;
             min-height: 4vh;
             max-height: 9vh !important;
@@ -21,7 +21,7 @@
             margin-right: 12px;
         }
 
-        #myGroups .card .card-body {
+        #myGroups .card .card-body, #cosplays .card .card-body {
             display: inline-block;
             padding: 4px;
         }
@@ -76,4 +76,26 @@
     padding: 1px 6px;
     font-size: 10px;
     background: red;
+}
+
+    .cosplay-stats .progress {
+        height: 28px;
+        background: transparent;
+        border: 2px solid var(--cosgear-4);
+    }
+
+    .cosplay-stats .progress .progress-bar {
+        background: var(--cosgear-4);
+        color: var(--cosgear-5);
+        text-align: center;
+    }
+
+.cosplay-stats p {
+    z-index: 2;
+    margin-bottom: -24px;
+    display: block;
+    position: relative;
+    width: 100%;
+    text-align: center;
+    justify-items: center;
 }

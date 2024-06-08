@@ -1,0 +1,74 @@
+﻿@{
+    Layout = "_Layout";
+    ViewData["Title"] = "Privacy Policy";
+}
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="../css/groups.css" rel="stylesheet">
+    <link href="../css/myGroups.css" rel="stylesheet">
+</head>
+
+<!-- Top Header Area -->
+<div class="header">
+    <!-- Controls and Label -->
+    <div>
+        <h1 class="d-inline">
+            <a href="@Url.Action("Index","Home")" class="text-decoration-none">
+                <i class='bx bx-arrow-back'></i>
+            </a>
+            Group Name
+        </h1>
+
+        <!-- Button trigger modal -->
+        <button type="button" class="action" data-bs-toggle="modal" data-bs-target="#createGroupModal">
+            <i class='bx bx-plus-circle'></i>
+        </button>
+
+    </div>
+
+    <!-- Nagivation Bar -->
+    <ul class="nav nav-underline top-nav" id="groupsNav">
+        <li class="nav-item">
+            <a class="nav-link" href="#" onclick="toggleActiveTab(this, 'feed')">Feed</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#" onclick="toggleActiveTab(this, 'cosplays')">Cosplays</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#" onclick="toggleActiveTab(this, 'resources')">Resources</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#" onclick="toggleActiveTab(this, 'chat')">Chat</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#" onclick="toggleActiveTab(this, 'about')">About</a>
+        </li>
+    </ul>
+
+    <!-- Scroll to Top Button -->
+    <button onclick="topFunction()" id="myBtn" title="Go to top"><i class='bx bxs-chevron-up'></i></button>
+
+    <!-- Groups Feed Container -->
+    <!-- NOTE: Realistically, this would be the same view with a filter applied to the post collection to only display the posts that belong to this group -->
+    <div id="feed" class="tabcontent hide">
+        <partial>
+            @{
+                await Html.RenderPartialAsync("_Partials/GroupsFeed");
+            }
+        </partial>
+    </div>
+
+    <!-- Groups Cosplays Container -->
+    <div id="cosplays" class="tabcontent hide">
+        <partial>
+            @{
+                await Html.RenderPartialAsync("_Partials/GroupCosplays");
+            }
+        </partial>
+    </div>
+
+    <script src="js/groups.js"></script>
+
+</div>

@@ -18,6 +18,7 @@ body {
     .header i {
         font-size: 24px;
         vertical-align: middle;
+        color: var(--cosgear-5);
     }
 
     .header .action {
@@ -42,9 +43,13 @@ body {
 
 .btn-cosgear {
     background: var(--cosgear-2);
-    color: var(--cosgear-1);
+    color: var(--cosgear-1) !important;
     width: fit-content;
 }
+    .btn-cosgear i {
+        font-size: 14px;
+        color: var(--cosgear-1) !important;
+    }
 
     .btn-cosgear .bxs-down-arrow {
         font-size: 12px;
