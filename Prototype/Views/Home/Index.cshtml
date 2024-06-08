@@ -15,7 +15,11 @@
         <div>
             <h1 class="d-inline"> <i class='bx bx-group'></i> Groups</h1>
 
-            <a class="d-inline post-ghost action" href="#"><i class='bx bx-plus-circle'></i></a>
+            <!-- Button trigger modal -->
+            <button type="button" class="action" data-bs-toggle="modal" data-bs-target="#createGroupModal">
+                <i class='bx bx-plus-circle'></i>
+            </button>
+
         </div>
 
         <!-- Nagivation Bar -->
@@ -32,6 +36,13 @@
         </ul>
     </div>
 
+    <section>
+        <partial>
+            @{
+                await Html.RenderPartialAsync("Modals/CreateGroup");
+            }
+        </partial>
+    </section>
     <!-- Scroll to Top Button -->
     <button onclick="topFunction()" id="myBtn" title="Go to top"><i class='bx bxs-chevron-up'></i></button>
 

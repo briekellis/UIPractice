@@ -1,0 +1,130 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+<link rel="stylesheet" href="~/css/modal.css" />
+<link rel="stylesheet" href="~/css/imageUpload.css" />
+<!-- Modal -->
+<div class="modal fade" id="createGroupModal" tabindex="-1" aria-labelledby="createGroupModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">Create Group</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+
+                <!-- Name Input -->
+                <div class="mb-3">
+                    <label for="groupName" class="form-label">Group Name</label>
+                    <input type="text" class="form-control" id="groupName" placeholder="Something fun...!">
+                </div>
+
+                <!-- Group Privacy -->
+                <div class="mb-3">
+                    <label for="groupPrivacy" class="form-label">Privacy</label>
+                    <select class="form-select" id="groupPrivacy" aria-label="Default select example">
+                        <option value="Public">Public</option>
+                        <option value="Private">Private</option>
+                    </select>
+                </div>
+
+                <!-- Group Relation -->
+                <div class="mb-3">
+                    <label class="form-label">Is this group related to a specific fandom or character?</label>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="groupRelation" id="fandom" value="fandom" checked onclick="toggleGroupRelation('fandom')">
+                        <label class="form-check-label" for="fandom">Fandom</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="groupRelation" id="character" value="character" onclick="toggleGroupRelation('char')">
+                        <label class="form-check-label" for="character">Character</label>
+                    </div>
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="groupRelation" id="noRelation" value="noRelation" onclick="toggleGroupRelation('no')">
+                        <label class="form-check-label" for="noRelation">No Relation</label>
+                    </div>
+
+                    <!-- Fandom -->
+                    <div id="groupFandom" class="mb-3">
+                        <label for="fandomDataList" class="form-label">Fandom</label>
+                        <input class="form-control" list="datalistOptions" id="fandomDataList" placeholder="Type your fandom...">
+                        <datalist id="datalistOptions">
+                            <option value="This Fandom"></option>
+                            <option value="Another Fandom"></option>
+                            <option value="Example Fandom"></option>
+                            <option value="Fandom 2023"></option>
+                            <option value="Fandom 2024"></option>
+                        </datalist>
+                    </div>
+
+                    <!-- Character -->
+                    <div id="groupCharacter" class="mb-3 hide">
+                        <label for="characterDataList" class="form-label">Character</label>
+                        <input class="form-control" list="datalistOptions" id="characterDataList" placeholder="Type the character name...">
+                        <datalist id="datalistOptions">
+                            <option value="This Character"></option>
+                            <option value="Another Character"></option>
+                            <option value="Example Character"></option>
+                            <option value="Character 1"></option>
+                            <option value="Character 2"></option>
+                        </datalist>
+                    </div>
+
+                    <!-- Add Origin -->
+                    <div id="groupOrigin">
+                        <div class="form-check form-switch">
+                            <input class="form-check-input" type="checkbox" role="switch" id="groupFandomOrigin" onclick="toggleOrigin(this)">
+                            <label class="form-check-label" for="groupFandomOrigin">Add an origin</label>
+                        </div>
+
+                        <div id="originInput" class="hide">
+                            <label for="originDataList" class="form-label">Origin</label>
+                            <input class="form-control" list="datalistOptions" id="originDataList" placeholder="Type the origin...">
+                            <datalist id="datalistOptions">
+                                <option value="This Spin-Off"></option>
+                                <option value="This AU"></option>
+                                <option value="This Episode"></option>
+                            </datalist>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <!-- About Input -->
+                <div class="mb-3">
+                    <label for="aboutGroup" class="form-label">About</label>
+                    <textarea class="form-control" id="aboutGroup" rows="3" placeholder="Give a short blurb about your group..."></textarea>
+                </div>
+
+                <!-- Group Image Uploader -->
+                <div class="text-center">
+                    <label for="aboutGroup" class="form-label">Group Image</label>
+                    <form class="file-upload-form text-center">
+                        <label for="file" class="file-upload-label">
+                            <div class="file-upload-design">
+                                <i class='bx bxs-cloud-upload'></i>
+                                <div class="desktop">
+                                    <p>Drag and Drop</p>
+                                    <p>or</p>
+                                </div>
+                                <span class="browse-button">Browse...</span>
+                            </div>
+                            <input id="file" type="file" />
+                        </label>
+                    </form>
+                </div>
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-cosgear">Publish Group</button>
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="~/js/groups.js"></script>

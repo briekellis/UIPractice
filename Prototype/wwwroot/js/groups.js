@@ -64,3 +64,36 @@ function toggleActiveTab(toggleMe, tabName) {
     openMe.classList.remove('hide');
     openMe.classList.add('show');
 }
+
+function toggleGroupRelation(relType) {
+    console.log(relType);
+
+    var charInput = document.getElementById('groupCharacter');
+    var fandomInput = document.getElementById('groupFandom');
+    var origin = document.getElementById('groupOrigin');
+
+    if (relType == 'char') {
+        charInput.classList.remove('hide');
+        fandomInput.classList.add('hide');
+        origin.classList.remove('hide');
+    } else if (relType == 'fandom') {
+        charInput.classList.add('hide');
+        fandomInput.classList.remove('hide');
+        origin.classList.remove('hide');
+    } else {
+        charInput.classList.add('hide');
+        fandomInput.classList.add('hide');
+        origin.classList.add('hide');
+    }
+}
+
+function toggleOrigin(addOrigin) {
+    console.log(addOrigin.checked);
+
+    var originInput = document.getElementById('originInput');
+    if (addOrigin.checked == true) {
+        originInput.classList.remove('hide');
+    } else {
+        originInput.classList.add('hide');
+    }
+}

@@ -25,9 +25,20 @@ body {
         vertical-align: middle;
     }
 
-        .header .action:hover {
-            color: var(--cosgear-4);
-        }
+    .header button.action {
+        background: transparent;
+        border: none;
+        line-height: 1em;
+        color: var(--cosgear-2);
+    }
+
+    .header .action:hover {
+        color: var(--cosgear-4);
+    }
+
+    .header button.action:hover {
+        color: var(--cosgear-4);
+    }
 
 .btn-cosgear {
     background: var(--cosgear-2);
@@ -151,5 +162,3 @@ body {
 .hide {
     display: none;
 }
-
-

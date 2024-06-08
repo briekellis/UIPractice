@@ -1,0 +1,17 @@
+﻿body {
+}
+
+.modal-content {
+    background-color: var(--cosgear-3) !important;
+    color: var(--cosgear-5);
+}
+
+    .modal-content .btn-close {
+        color: var(--cosgear-5);
+        background-color: var(--cosgear-5);
+    }
+
+
+.hide {
+    display: none;
+}
