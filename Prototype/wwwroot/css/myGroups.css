@@ -1,0 +1,79 @@
+﻿/* My Groups Styling */
+#myGroups {
+    max-width: 95vw;
+    width: 100%;
+}
+
+    #myGroups .card {
+        background: var(--cosgear-3);
+        color: var(--cosgear-5);
+        vertical-align: middle;
+        margin: 4px 0px;
+    }
+
+        #myGroups .card img {
+            float: left;
+            min-height: 4vh;
+            max-height: 9vh !important;
+            width: auto;
+            margin-right: 8px;
+            border-radius: 8px;
+            margin-right: 12px;
+        }
+
+        #myGroups .card .card-body {
+            display: inline-block;
+            padding: 4px;
+        }
+
+#groupsContainer {
+    overflow-x: hidden;
+}
+
+    #groupsContainer #toolbar {
+        max-width: 95vw;
+        display: inline-flex;
+    }
+
+        #groupsContainer #toolbar #groupSearch {
+            margin-right: 12px
+        }
+
+        #groupsContainer #toolbar .dropdown {
+            max-width: 25%;
+        }
+
+.group-stats .bx {
+    font-size: 20px;
+    font-weight: 200 !important;
+    vertical-align: middle;
+    display: inline-block; /* Inline elements with width and height. TL;DR they make the icon buttons stack from left-to-right instead of top-to-bottom */
+    position: relative; /* All 'absolute'ly positioned elements are relative to this one */
+    padding: 2px 5px;
+}
+
+.group-activity {
+    position: absolute;
+    z-index: 10;
+    right: 12px;
+    top: 30%;
+    float: right;
+    display: inline-flex;
+}
+
+.notification .bx {
+    font-size: 30px;
+    font-weight: 200 !important;
+    vertical-align: middle;
+    display: inline;
+}
+
+.notification .button__badge {
+    position: relative;
+    top: -12px;
+    right: 8px;
+    border-radius: 50%;
+    padding: 1px 6px;
+    font-size: 10px;
+    background: red;
+}

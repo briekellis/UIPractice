@@ -55,6 +55,11 @@
 
     <!-- Discover Groups Container -->
     <div id="discover" class="tabcontent hide">
+        <partial>
+            @{
+                await Html.RenderPartialAsync("_Partials/Discover");
+            }
+        </partial>
     </div>
 
     <script src="js/groups.js"></script>

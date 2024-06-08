@@ -1,0 +1,8 @@
+﻿.navbar {
+    background-color: black;
+    border-bottom: 1px solid var(--cosgear-2);
+}
+
+    .navbar .nav-link {
+        color: var(--cosgear-5);
+    }

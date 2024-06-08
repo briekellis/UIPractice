@@ -1,0 +1,49 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    int groupNumber = 12;
+    Random rnd = new Random();
+}
+<head>
+    <link rel="stylesheet" href="css/discover.css" />
+</head>
+<section class="container scroll-container" onscroll="scrollFunction('discoverContainer')" id="discoverContainer">
+
+    <!-- Mid Level Tools -->
+    <div id="toolbar">
+
+        <!-- Search -->
+        <div class="input-group mb-3" id="discoverSearch">
+            <span class="input-group-text"><i class='bx bx-search'></i></span>
+            <input type="text" class="form-control" aria-label="Search Groups">
+        </div>
+    </div>
+
+    <!-- Group Lists -->
+    <div class="container">
+        @for (int i = 0; i < groupNumber; i++)
+        {
+            <div class="card">
+                <div class="card-body d-inline-flex">
+                    <div class="img-container">
+                        <img src="imgs/myGroups/discover.png" alt="...">
+                    </div>
+                    <div class="d-inline">
+                        <h3>Group @i</h3>
+                        <div class="group-stats">
+                            <i class='bx bx-user-circle'></i>
+                            @rnd.Next(1, 50)
+
+                            <i class='bx bx-lock-open-alt'></i>
+                            Public
+                        </div>
+                        This is a short summary of the group.
+                    </div>
+                </div>
+            </div>
+        }
+
+    </div>
+
+</section>

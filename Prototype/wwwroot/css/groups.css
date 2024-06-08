@@ -1,11 +1,3 @@
-:root {
-    --cosgear-1: #0c081a;
-    --cosgear-2: rgb(255 199 0);
-    --cosgear-3: rgb(32 29 51);
-    --cosgear-4: #D35079;
-    --cosgear-5: #f1f1f1;
-}
-
 body {
     background-color: var(--cosgear-1);
     color: var(--cosgear-5);
@@ -78,124 +70,6 @@ body {
         .nav-underline .nav-link.active {
             color: var(--cosgear-5);
             border-bottom: 2px solid var(--cosgear-2);
-        }
-
-/* Feed Styling */
-
-#postContainer .container {
-    padding: 0;
-}
-
-.post-ghost {
-    color: var(--cosgear-5);
-    display: flex;
-    opacity: 0.75;
-    position: relative;
-}
-
-.post-card {
-    background: var(--cosgear-3);
-    padding: 12px;
-    padding-top: 4px;
-    border-radius: 8px;
-    margin-bottom: 8px;
-    text-align: left;
-    font-size: 14px;
-}
-
-    .post-card .post-header {
-        margin-top: 10px;
-        vertical-align: middle;
-    }
-
-        .post-card .post-header p {
-            padding: 0;
-        }
-
-    .post-card .post-time {
-        float: right;
-    }
-
-    .post-card .avatar {
-        vertical-align: middle;
-        width: 40px;
-        height: 40px;
-        border-radius: 50%;
-        margin-right: 4px;
-    }
-
-    /* Content Toggling Controls */
-    .post-card .hideContent {
-        max-height: 180px;
-        overflow: hidden;
-        line-height: 1em;
-        height: 2em;
-        /* Set Transitions */
-        transition: max-height 0.1s;
-    }
-
-    .post-card .showContent {
-        line-height: 1em;
-        height: fit-content;
-    }
-
-    .post-card .show-more {
-        padding: 10px 0;
-        text-align: center;
-        color: var(--cosgear-5);
-    }
-
-    /* Image Styling */
-
-    /* Slideshow container */
-    .post-card .slideshow-container {
-        max-height: 600px;
-        max-width: 90vw;
-        position: relative;
-    }
-
-    /* Next & previous buttons */
-    .post-card .prev, .post-card .next {
-        cursor: pointer;
-        position: absolute;
-        top: 50%;
-        width: auto;
-        padding: 16px;
-        margin-top: -22px;
-        color: var(--cosgear-5);
-        font-weight: bold;
-        font-size: 18px;
-        transition: 0.6s ease;
-        border-radius: 0 3px 3px 0;
-        user-select: none;
-        text-decoration: none;
-    }
-
-    /* Position the "next button" to the right */
-    .post-card .next {
-        right: 0;
-        border-radius: 3px 0 0 3px;
-    }
-
-    .post-card img {
-        max-width: 100%;
-        vertical-align: middle;
-    }
-
-    .post-card .numbertext {
-        text-align: center;
-    }
-
-    /* Post Action Buttons */
-    .post-card .post-action {
-        text-decoration: none;
-        color: var(--cosgear-5);
-        vertical-align: middle;
-        margin: 4px;
-    }
-
-        .post-card.post-action i {
-            font-size: 20px;
         }
 
 /* Back To Top Button */
@@ -278,21 +152,4 @@ body {
     display: none;
 }
 
-/* My Groups Styling */
-#myGroups .card {
-    background: var(--cosgear-3);
-    color: var(--cosgear-5);
-    vertical-align: middle;
-    margin: 6px 0px;
-}
 
-    #myGroups .card img {
-        float: left;
-        max-height: 15vh;
-        max-width: 15vw;
-        margin-right: 8px;
-    }
-
-    #myGroups .card .card-body {
-        display: inline-block;
-    }

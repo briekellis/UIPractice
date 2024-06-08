@@ -1,9 +1,16 @@
 $(document).ready(function () {
-    console.log('page is ready');
+    //console.log('ready!');
+    var subNav = document.getElementById('groupsNav');
+    var navLinks = subNav.getElementsByClassName('nav-link');
+    var tabs = document.getElementsByClassName('tabcontent');
 
-    var navLinks = document.getElementsByClassName('nav-link');
+    //console.log(tabs);
+    //console.log(tabs[0]);
+    //console.log(navLinks);
+    //console.log(navLinks[0]);
 
-    navLinks[0].classList.add('active');
+    navLinks[0].classList.toggle('active');
+    tabs[0].classList.toggle('hide');
     navLinks[0].click();
 });
 
@@ -42,8 +49,8 @@ function toggleActiveTab(toggleMe, tabName) {
     var tabs = document.getElementsByClassName('tabcontent');
     var openMe = document.getElementById(tabName);
 
-    console.log(tabs);
-    console.log(openMe);
+    //console.log(tabs);
+    //console.log(openMe);
 
     for (i = 0; i < navLinks.length; i++) {
         navLinks[i].classList.remove('active');

@@ -1,0 +1,45 @@
+﻿body {
+}
+/* My Groups Styling */
+#discover .card {
+    background: var(--cosgear-3);
+    color: var(--cosgear-5);
+    vertical-align: middle;
+    margin: 4px 0px;
+    padding: 4px;
+}
+
+    #discover .card img {
+        float: left;
+        min-height: 4vh;
+        max-height: 9vh !important;
+        width: auto;
+        margin-right: 8px;
+        border-radius: 8px;
+        margin-right: 12px;
+    }
+
+    #discover .card .card-body {
+        display: inline-block;
+        padding: 4px;
+    }
+
+#groupsContainer #toolbar {
+    width: 100%;
+    display: inline-flex;
+}
+
+    #groupsContainer #toolbar #groupSearch {
+        max-width: 75%;
+        margin-right: 12px
+    }
+
+    #groupsContainer #toolbar .dropdown {
+        max-width: 25%;
+    }
+
+.group-stats .bx {
+    font-size: 20px;
+    font-weight: 200 !important;
+    vertical-align: middle;
+}

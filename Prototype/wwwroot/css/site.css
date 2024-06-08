@@ -1,5 +1,13 @@
+:root {
+    --cosgear-1: #0c081a;
+    --cosgear-2: rgb(255 199 0);
+    --cosgear-3: rgb(32 29 51);
+    --cosgear-4: #D35079;
+    --cosgear-5: #f1f1f1;
+}
+
 html {
-  font-size: 14px;
+    font-size: 14px;
 }
 
 @media (min-width: 768px) {
@@ -18,5 +26,5 @@ html {
 }
 
 body {
-  margin-bottom: 60px;
+    margin-bottom: 60px;
 }

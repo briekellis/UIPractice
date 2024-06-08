@@ -13,6 +13,11 @@ function scrollFunction(control) {
     } else {
         mybutton.style.display = "none";
     }
+
+    var feedFilters = document.getElementById('feedFilters');
+    var groupFilters = document.getElementById('groupsFilters');
+    feedFilters.classList.remove('show');
+    groupFilters.classList.remove('show');
 }
 
 // When the user clicks on the button, scroll to the top of the document
