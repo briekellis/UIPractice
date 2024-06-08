@@ -81,6 +81,11 @@ body {
         }
 
 /* Feed Styling */
+
+#postContainer .container {
+    padding: 0;
+}
+
 .post-ghost {
     color: var(--cosgear-5);
     display: flex;
@@ -137,6 +142,7 @@ body {
     .post-card .show-more {
         padding: 10px 0;
         text-align: center;
+        color: var(--cosgear-5);
     }
 
     /* Image Styling */

@@ -7,21 +7,28 @@ $(document).ready(function () {
     navLinks[0].click();
 });
 
-$(".show-more").on("click", function () {
-    var $this = $(this);
-    var $content = $this.parent().prev("div.content");
-    var linkText = $this.text().toUpperCase();
+function showMoreContent(control) {
+    var content = control.parentNode.parentNode.getElementsByClassName("content");
+    var linkText = control.text.toUpperCase();
+
+    var toggleMe = content[0];
 
     if (linkText === "SHOW MORE") {
         linkText = "Show less";
-        $content.switchClass("hideContent", "showContent", 400);
+
+        toggleMe.classList.remove("hideContent");
+        toggleMe.classList.add('showContent');
+
+        console.log("Show content");
     } else {
         linkText = "Show more";
-        $content.switchClass("showContent", "hideContent", 400);
+        toggleMe.classList.remove("showContent");
+        toggleMe.classList.add("hideContent");
     };
 
-    $this.text(linkText);
-});
+    control.text = linkText;
+    control.classList.add('post-ghost');
+}
 
 /* When the user clicks on the button, 
 toggle between hiding and showing the dropdown content */
@@ -40,7 +47,7 @@ function toggleActiveTab(toggleMe, tabName) {
 
     for (i = 0; i < navLinks.length; i++) {
         navLinks[i].classList.remove('active');
-    } 
+    }
     for (var i = 0; i < tabs.length; i++) {
         tabs[i].classList.remove('show');
         tabs[i].classList.add('hide');
