@@ -22,5 +22,8 @@ function scrollFunction(control) {
 
 // When the user clicks on the button, scroll to the top of the document
 function topFunction() {
-    postContainer.scrollTop = 0;
+    var scrollers = document.getElementsByClassName('scroll-container');
+    for (var i = 0; i < scrollers.length; i++) {
+        scrollers[i].scrollTop = 0;
+    }
 }
