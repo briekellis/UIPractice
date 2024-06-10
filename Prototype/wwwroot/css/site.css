@@ -27,4 +27,9 @@ html {
 
 body {
     margin-bottom: 60px;
+    scrollbar-width: none;
+}
+
+.scroll-container::-webkit-scrollbar {
+    display: none;
 }
