@@ -20,12 +20,12 @@
         </div>
 
         <!-- Example single danger button -->
-        <div class="dropdown">
+        <div class="dropdown dropstart">
             <button onclick="toggleDropdown('groupsFilters')" class="btn btn-cosgear">
                 <i class='bx bx-filter-alt'></i>
                 <i class='bx bxs-down-arrow'></i>
             </button>
-            <div id="groupsFilters" class="dropdown-content">
+            <div id="groupsFilters" class="dropdown-content" style="right: 5%;">
 
                 <!-- Order By -->
                 <div class="dropdown-filters">
@@ -73,8 +73,8 @@
         {
             <div class="card group-card">
                 <div class="card-body">
-                    <a href="@Url.Action("GroupView", "Home")">
-                            <img src="imgs/myGroups/group1.jpeg" alt="...">
+                    <a href="@Url.Action("GroupView", "Home")" class="img-container">
+                        <img src="imgs/myGroups/group1.jpeg" class="" alt="...">
                     </a>
                     <div class="p-4">
                         <a href="@Url.Action("GroupView", "Home")">
