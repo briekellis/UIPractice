@@ -65,9 +65,15 @@ body {
 }
 
 .scroll-container {
-    height: fit-content;
     max-height: 85vh;
     overflow-y: auto;
+}
+    .scroll-container .container {
+        padding: 0;
+    }
+
+.group-card {
+    vertical-align: middle;
 }
 
 .nav-underline {
@@ -89,7 +95,7 @@ body {
         }
 
 /* Back To Top Button */
-#myBtn {
+.myBtn {
     display: none;
     position: fixed;
     bottom: 20px;
@@ -105,7 +111,7 @@ body {
     border-radius: 12px;
 }
 
-    #myBtn:hover {
+    .myBtn:hover {
         background-color: var(--cosgear-4);
     }
 

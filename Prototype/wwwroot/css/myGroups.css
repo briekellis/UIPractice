@@ -11,20 +11,25 @@
         margin: 4px 0px;
     }
 
+        #myGroups .card a, #cosplays .card a {
+            text-decoration: none;
+            color: var(--cosgear-5) !important;
+        }
+
         #myGroups .card img, #cosplays .card img {
             float: left;
             min-height: 4vh;
-            max-height: 9vh !important;
+            max-height: 10vh !important;
             width: auto;
-            margin-right: 8px;
+            margin-left: auto;
+            margin-right: 0.5em;
             border-radius: 8px;
-            margin-right: 12px;
         }
 
-        #myGroups .card .card-body, #cosplays .card .card-body {
-            display: inline-block;
-            padding: 4px;
-        }
+.card-body {
+    padding: 0;
+    vertical-align: middle;
+}
 
 #groupsContainer {
     overflow-x: hidden;
@@ -56,33 +61,24 @@
     position: absolute;
     z-index: 10;
     right: 12px;
-    top: 30%;
+    top: 35%;
     float: right;
     display: inline-flex;
 }
 
-.notification .bx {
-    font-size: 30px;
-    font-weight: 200 !important;
-    vertical-align: middle;
-    display: inline;
-}
-
-.notification .button__badge {
-    position: relative;
-    top: -12px;
-    right: 8px;
-    border-radius: 50%;
-    padding: 1px 6px;
-    font-size: 10px;
-    background: red;
-}
-
-    .cosplay-stats .progress {
-        height: 28px;
-        background: transparent;
-        border: 2px solid var(--cosgear-4);
+    .group-activity .notification .bx {
+        position: relative;
+        font-size: 30px;
+        font-weight: 200 !important;
+        vertical-align: middle;
+        display: inline;
     }
+
+.cosplay-stats .progress {
+    height: 28px;
+    background: transparent;
+    border: 2px solid var(--cosgear-4);
+}
 
     .cosplay-stats .progress .progress-bar {
         background: var(--cosgear-4);

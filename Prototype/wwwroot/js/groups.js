@@ -97,3 +97,7 @@ function toggleOrigin(addOrigin) {
         originInput.classList.add('hide');
     }
 }
+
+function userSelected(username) {
+    console.log(username);
+}

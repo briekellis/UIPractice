@@ -1,0 +1,41 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+<link rel="stylesheet" href="~/css/modal.css" />
+<link rel="stylesheet" href="~/css/imageUpload.css" />
+<!-- Modal -->
+<div class="modal fade" id="inviteUserModal" tabindex="-1" aria-labelledby="inviteUserModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">Invite User to Group</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+
+                <!-- User -->
+                <div id="inviteUser" class="mb-3">
+                    <label for="userDataList" class="form-label">Username</label>
+                    <input class="form-control" list="datalistOptions" id="userDataList" placeholder="Type your fandom..." onselect="userSelected(this.value)">
+                    <datalist id="datalistOptions">
+                        <option value="User12345"></option>
+                        <option value="AnotherUser"></option>
+                        <option value="Cosplayer789"></option>
+                        <option value="CosplayingDog1"></option>
+                        <option value="CatsDoCosplay2"></option>
+                    </datalist>
+                </div>
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-cosgear">Invite User</button>
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="~/js/groups.js"></script>

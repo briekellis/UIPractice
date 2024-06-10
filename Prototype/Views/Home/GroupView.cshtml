@@ -6,9 +6,12 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="../css/groups.css" rel="stylesheet">
-    <link href="../css/myGroups.css" rel="stylesheet">
+    <link href="~/css/groups.css" rel="stylesheet">
+    <link href="~/css/myGroups.css" rel="stylesheet">
 </head>
+
+<!-- Scroll to Top Button -->
+<button onclick="topFunction()" class="myBtn" title="Go to top"><i class='bx bxs-chevron-up'></i></button>
 
 <!-- Top Header Area -->
 <div class="header">
@@ -22,8 +25,8 @@
         </h1>
 
         <!-- Button trigger modal -->
-        <button type="button" class="action" data-bs-toggle="modal" data-bs-target="#createGroupModal">
-            <i class='bx bx-plus-circle'></i>
+        <button type="button" class="action" data-bs-toggle="modal" data-bs-target="#inviteUserModal">
+            <i class='bx bxs-user-plus'></i>
         </button>
 
     </div>
@@ -45,10 +48,7 @@
         <li class="nav-item">
             <a class="nav-link" href="#" onclick="toggleActiveTab(this, 'about')">About</a>
         </li>
-    </ul>
-
-    <!-- Scroll to Top Button -->
-    <button onclick="topFunction()" id="myBtn" title="Go to top"><i class='bx bxs-chevron-up'></i></button>
+    </ul>  
 
     <!-- Groups Feed Container -->
     <!-- NOTE: Realistically, this would be the same view with a filter applied to the post collection to only display the posts that belong to this group -->
@@ -68,7 +68,4 @@
             }
         </partial>
     </div>
-
-    <script src="js/groups.js"></script>
-
 </div>
