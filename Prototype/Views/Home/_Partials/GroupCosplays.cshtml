@@ -5,10 +5,6 @@
     int groupNumber = 12;
     Random rnd = new Random();
 }
-<head>
-    <link rel="stylesheet" href="../css/groups.css" />
-    <link rel="stylesheet" href="../css/myGroups.css" />
-</head>
 <section class="scroll-container" onscroll="scrollFunction('groupsContainer')" id="groupsContainer">
 
     <!-- Mid Level Tools -->
@@ -24,7 +20,6 @@
         <div class="dropdown">
             <button onclick="toggleDropdown('groupsFilters')" class="btn btn-cosgear">
                 <i class='bx bx-filter-alt'></i>
-                <i class='bx bxs-down-arrow'></i>
             </button>
             <div id="groupsFilters" class="dropdown-content">
 
@@ -69,31 +64,33 @@
     </div>
 
     <!-- Group Lists -->
-    <div>
+    <div class="container">
         @for (int i = 0; i < groupNumber; i++)
         {
             int cosProg = rnd.Next(0, 100);
 
-            <div class="card">
-                <div class="card-body d-inline-flex">
+            <div class="card group-card">
+                <div class="card-body">
                     <div class="img-container">
                         <img src="../imgs/groupCosplays/fran.jpg" alt="...">
                     </div>
-                    <div class="d-inline">
-                        <h3>Character Name</h3>
-                        <small> by @@Username-@i</small>
+                    <div class="position-relative">
+                        <div class="position-sticky align-middle p-3">
+                            <h4 class="p-0">Character Name</h4>
+                            <small> by @@Username-@i</small>
 
-                        <!-- Cosplay Progress Bar-->
-                        <div class="cosplay-stats">
-                            <p>@cosProg%</p>
-                            <div class="progress" role="progressbar" aria-label="Cosplay Progress" aria-valuenow="@cosProg" aria-valuemin="0" aria-valuemax="100">
-                                <div class="progress-bar" style="width: @cosProg%">
+                            <!-- Cosplay Progress Bar-->
+                            <div class="cosplay-stats">
+                                <p>@cosProg%</p>
+                                <div class="progress" role="progressbar" aria-label="Cosplay Progress" aria-valuenow="@cosProg" aria-valuemin="0" aria-valuemax="100">
+                                    <div class="progress-bar" style="width: @cosProg%">
+                                    </div>
                                 </div>
                             </div>
                         </div>
 
                         <div class="group-activity">
-                            <div class="notification">
+                            <div class="cosplay-hype">
                                 <i class='bx bxs-hot'></i>
                                 <span>@rnd.Next(50, 150)</span>
                             </div>
@@ -106,5 +103,3 @@
     </div>
 
 </section>
-
-<script src="../js/groups.js"></script>

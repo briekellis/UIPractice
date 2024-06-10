@@ -17,13 +17,11 @@ body {
 
     .header i {
         font-size: 24px;
-        vertical-align: middle;
         color: var(--cosgear-5);
     }
 
     .header .action {
         float: right;
-        vertical-align: middle;
     }
 
     .header button.action {
@@ -46,6 +44,7 @@ body {
     color: var(--cosgear-1) !important;
     width: fit-content;
 }
+
     .btn-cosgear i {
         font-size: 14px;
         color: var(--cosgear-1) !important;
@@ -68,13 +67,10 @@ body {
     max-height: 85vh;
     overflow-y: auto;
 }
+
     .scroll-container .container {
         padding: 0;
     }
-
-.group-card {
-    vertical-align: middle;
-}
 
 .nav-underline {
     max-width: 100vw;
@@ -118,13 +114,21 @@ body {
 /* Toolbar Styling */
 #toolbar {
     margin: 8px;
+    margin-left: auto;
+    margin-right: auto;
     text-align: left;
 }
+
+    #toolbar .bx {
+        color: var(--cosgear-1);
+        font-size: 18px;
+    }
 
     #toolbar .dropdown {
         position: relative;
         display: inline-block;
         border-radius: 8px;
+        color: var(--cosgear-1);
     }
 
     #toolbar .dropdown-content {
