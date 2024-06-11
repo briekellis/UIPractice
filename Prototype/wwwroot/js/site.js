@@ -9,11 +9,14 @@ $(document).ready(function () {
     console.log(setActiveTab);
 
     if (setActiveTab != null) {
-        setActiveTab = document.getElementById(setActiveTab);
-        setActiveTab.click();
+        setActiveTab = document.getElementById(setActiveTab);       
+    } 
 
-        //localStorage.removeItem('activeTab');
-    } else {
+    try {
+        setActiveTab.click();
+    } catch (e) {
+        localStorage.removeItem('activeTab');
+
         var subNav = document.getElementById('groupsNav');
         var navLinks = subNav.getElementsByClassName('nav-link');
         var tabs = document.getElementsByClassName('tabcontent');
