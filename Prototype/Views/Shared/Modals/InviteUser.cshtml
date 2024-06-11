@@ -6,6 +6,7 @@
 
 <link rel="stylesheet" href="~/css/modal.css" />
 <link rel="stylesheet" href="~/css/imageUpload.css" />
+
 <!-- Modal -->
 <div class="modal fade" id="inviteUserModal" tabindex="-1" aria-labelledby="inviteUserModalLabel" aria-hidden="true">
     <div class="modal-dialog">
@@ -19,7 +20,7 @@
                 <!-- User -->
                 <div id="inviteUser" class="mb-3">
                     <label for="userDataList" class="form-label">Username</label>
-                    <input class="form-control" list="datalistOptions" id="userDataList" placeholder="Type your fandom..." onselect="userSelected(this.value)">
+                    <input class="form-control" list="datalistOptions" id="userDataList" placeholder="Type a username..." />
                     <datalist id="datalistOptions">
                         <option value="User12345"></option>
                         <option value="AnotherUser"></option>
@@ -31,11 +32,9 @@
 
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-cosgear">Invite User</button>
+                <button type="button" class="btn btn-cosgear" onclick="userSelected()">Invite User</button>
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
             </div>
         </div>
     </div>
 </div>
-
-<script src="~/js/groups.js"></script>

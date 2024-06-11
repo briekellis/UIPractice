@@ -98,6 +98,12 @@ function toggleOrigin(addOrigin) {
     }
 }
 
-function userSelected(username) {
-    console.log(username);
+function userSelected() {
+    var userInvite = document.getElementById('userDataList');
+    var dismissMe = document.getElementById('inviteUserModal');
+
+    // TODO: Implement Ajax call to send the user specified an invite 
+    //OR display an error message if there is no user using that username
+    console.log(userInvite.value);
+    dismissMe.dismiss();
 }

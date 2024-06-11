@@ -8,11 +8,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="~/css/groups.css" rel="stylesheet">
     <link href="~/css/myGroups.css" rel="stylesheet">
+    <link href="~/css/chat.css" rel="stylesheet" />
+
 </head>
 
 <!-- Scroll to Top Button -->
 <button onclick="topFunction()" class="myBtn" title="Go to top"><i class='bx bxs-chevron-up'></i></button>
 
+<partial>
+    @{
+        await Html.RenderPartialAsync("Modals/InviteUser");
+    }
+</partial>
 <!-- Top Header Area -->
 <div class="header">
     <!-- Controls and Label -->
@@ -24,9 +31,14 @@
             Group Name
         </h1>
 
-        <!-- Button trigger modal -->
+        <!-- Invite User Modal -->
         <button type="button" class="action" data-bs-toggle="modal" data-bs-target="#inviteUserModal">
             <i class='bx bxs-user-plus'></i>
+        </button>
+
+        <!-- Group Notifications-->
+        <button type="button" class="action" data-bs-toggle="modal" data-bs-target="#inviteUserModal">
+            <i class='bx bx-bell'></i>
         </button>
 
     </div>
@@ -48,9 +60,12 @@
         <li class="nav-item">
             <a class="nav-link" href="#" onclick="toggleActiveTab(this, 'about')">About</a>
         </li>
-    </ul>  
+    </ul>
+</div>
 
-    <!-- Groups Feed Container -->
+<!-- Groups Feed Container -->
+<div>
+
     <!-- NOTE: Realistically, this would be the same view with a filter applied to the post collection to only display the posts that belong to this group -->
     <div id="feed" class="tabcontent hide">
         <partial>
@@ -65,6 +80,24 @@
         <partial>
             @{
                 await Html.RenderPartialAsync("_Partials/GroupCosplays");
+            }
+        </partial>
+    </div> 
+    
+    <!-- Groups Resource Container -->
+    <div id="resources" class="tabcontent hide">
+        <partial>
+            @{
+                //await Html.RenderPartialAsync("_Partials/GroupCosplays");
+            }
+        </partial>
+    </div>
+    
+    <!-- Groups Resource Container -->
+    <div id="chat" class="tabcontent hide">
+        <partial>
+            @{
+                await Html.RenderPartialAsync("_Partials/GroupChat");
             }
         </partial>
     </div>
