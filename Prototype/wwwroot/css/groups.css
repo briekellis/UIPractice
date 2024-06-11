@@ -8,7 +8,7 @@ body {
 
 .header {
     position: sticky;
-    top: 0px;
+    top: 1%;
     padding-top: 16px;
     height: fit-content;
     padding: 0px 8px;
@@ -79,6 +79,7 @@ body {
     justify-content: space-between;
     margin-left: auto;
     margin-right: auto;
+    margin-top: 8px;
     border-bottom: 1px solid grey;
 }
 
@@ -86,6 +87,9 @@ body {
         color: var(--cosgear-5);
     }
 
+        .nav-underline .nav-link .bx {
+            font-size: 18px;
+        }
         .nav-underline .nav-link.active {
             color: var(--cosgear-5);
             border-bottom: 2px solid var(--cosgear-2);

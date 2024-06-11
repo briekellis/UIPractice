@@ -46,19 +46,34 @@
     <!-- Nagivation Bar -->
     <ul class="nav nav-underline top-nav" id="groupsNav">
         <li class="nav-item">
-            <a class="nav-link" href="#" onclick="toggleActiveTab(this, 'feed')">Feed</a>
+            <a class="nav-link d-grid justify-content-center" href="#" id="feed-tab" onclick="toggleActiveTab(this, 'feed')">
+                <i class='bx bxs-hot ms-auto me-auto'></i>
+                Feed
+            </a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="#" onclick="toggleActiveTab(this, 'cosplays')">Cosplays</a>
+            <a class="nav-link d-grid justify-content-center" href="#" id="cosplays-tab" onclick="toggleActiveTab(this, 'cosplays')">
+                <i class='bx bx-mask ms-auto me-auto'></i>
+                Cosplays
+            </a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="#" onclick="toggleActiveTab(this, 'resources')">Resources</a>
+            <a class="nav-link d-grid justify-content-center" href="#" id="resources-tab" onclick="toggleActiveTab(this, 'resources')">
+                <i class='bx bx-cut ms-auto me-auto'></i>
+                Resources
+            </a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="#" onclick="toggleActiveTab(this, 'chat')">Chat</a>
+            <a class="nav-link d-grid justify-content-center" href="#" id="chat-tab" onclick="toggleActiveTab(this, 'chat')">
+                <i class='bx bx-conversation ms-auto me-auto'></i>
+                Chat
+            </a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="#" onclick="toggleActiveTab(this, 'about')">About</a>
+            <a class="nav-link d-grid justify-content-center" href="#" id="about-tab" onclick="toggleActiveTab(this, 'about')">
+                <i class='bx bx-info-circle ms-auto me-auto'></i>
+                About
+            </a>
         </li>
     </ul>
 </div>
@@ -82,8 +97,8 @@
                 await Html.RenderPartialAsync("_Partials/GroupCosplays");
             }
         </partial>
-    </div> 
-    
+    </div>
+
     <!-- Groups Resource Container -->
     <div id="resources" class="tabcontent hide">
         <partial>
@@ -92,7 +107,7 @@
             }
         </partial>
     </div>
-    
+
     <!-- Groups Resource Container -->
     <div id="chat" class="tabcontent hide">
         <partial>

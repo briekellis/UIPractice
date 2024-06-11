@@ -1,18 +1,18 @@
-$(document).ready(function () {
-    //console.log('ready!');
-    var subNav = document.getElementById('groupsNav');
-    var navLinks = subNav.getElementsByClassName('nav-link');
-    var tabs = document.getElementsByClassName('tabcontent');
+//$(document).ready(function () {
+//    //console.log('ready!');
+//    var subNav = document.getElementById('groupsNav');
+//    var navLinks = subNav.getElementsByClassName('nav-link');
+//    var tabs = document.getElementsByClassName('tabcontent');
 
-    //console.log(tabs);
-    //console.log(tabs[0]);
-    //console.log(navLinks);
-    //console.log(navLinks[0]);
+//    //console.log(tabs);
+//    //console.log(tabs[0]);
+//    //console.log(navLinks);
+//    //console.log(navLinks[0]);
 
-    navLinks[0].classList.toggle('active');
-    tabs[0].classList.toggle('hide');
-    navLinks[0].click();
-});
+//    navLinks[0].classList.toggle('active');
+//    tabs[0].classList.toggle('hide');
+//    navLinks[0].click();
+//});
 
 function showMoreContent(control) {
     var content = control.parentNode.parentNode.getElementsByClassName("content");
@@ -48,6 +48,9 @@ function toggleActiveTab(toggleMe, tabName) {
     var navLinks = document.getElementsByClassName('nav-link');
     var tabs = document.getElementsByClassName('tabcontent');
     var openMe = document.getElementById(tabName);
+
+    var activeTabId = tabName + "-tab";
+    setActiveTab(activeTabId);
 
     //console.log(tabs);
     //console.log(openMe);

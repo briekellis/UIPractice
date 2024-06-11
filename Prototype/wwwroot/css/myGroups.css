@@ -1,31 +1,18 @@
 ﻿/* My Groups Styling */
-#myGroups, #cosplays {
+.groupList {
     max-width: 95vw;
     width: 100%;
 }
-
-    #myGroups .card, #cosplays .card {
+    .groupList .group-card {
         background: var(--cosgear-3);
         color: var(--cosgear-5);
         margin: 4px 0px;
     }
 
-        #myGroups .card a, #cosplays .card a {
+        .groupList .group-card a {
             text-decoration: none;
-            color: var(--cosgear-5) !important;
+            color: var(--cosgear-5);
         }
-
-        #myGroups .card img, #cosplays .card img {
-            margin-left: auto;
-        }
-
-@media (max-width: 750px) {
-    .img-container {
-        height: 100px;
-        width: 100px;
-        margin-right: 0.5em;
-    }
-}
 
 .img-container {
     margin: auto;
@@ -42,6 +29,26 @@
         vertical-align: middle;
         object-fit: fill;
     }
+
+
+
+    @media (max-width: 715px) {
+        .groupList .group-card {
+        height: 80px;
+    }
+    .img-container {
+        height: 80px;
+        width: 80px;
+        margin-right: 0.5em;
+        vertical-align: middle;
+        align-content: center;
+        text-align: center;
+    }
+        .img-container img {
+            align-self: center;
+            text-align: center;
+        }
+}
 
 .card-body {
     padding: 0;
@@ -102,21 +109,21 @@
         border: 2px solid var(--cosgear-4);
     }
 
-    .cosplay-stats .progress .progress-bar {
-        background: var(--cosgear-4);
-        color: var(--cosgear-5);
-        text-align: center;
-    }
+        .cosplay-stats .progress .progress-bar {
+            background: var(--cosgear-4);
+            color: var(--cosgear-5);
+            text-align: center;
+        }
 
-.cosplay-stats p {
-    z-index: 2;
-    margin-bottom: -24px;
-    display: block;
-    position: relative;
-    width: 100%;
-    text-align: center;
-    justify-items: center;
-}
+    .cosplay-stats p {
+        z-index: 2;
+        margin-bottom: -24px;
+        display: block;
+        position: relative;
+        width: 100%;
+        text-align: center;
+        justify-items: center;
+    }
 
 .cosplay-hype {
     display: inline-flex;
