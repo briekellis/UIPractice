@@ -1,9 +1,9 @@
-﻿/* My Groups Styling */
+﻿/* Card Element Styling */
 .groupList {
     max-width: 95vw;
     width: 100%;
 }
-    .groupList .group-card {
+    .groupList .group-card, .group-card {
         background: var(--cosgear-3);
         color: var(--cosgear-5);
         margin: 4px 0px;
@@ -13,6 +13,23 @@
             text-decoration: none;
             color: var(--cosgear-5);
         }
+
+.group-activity {
+    position: absolute;
+    z-index: 3;
+    right: 12px;
+    top: 20%;
+    float: right;
+    display: inline-flex;
+}
+
+    .group-activity .notification .bx {
+        position: relative;
+        font-size: 30px;
+        font-weight: 200 !important;
+        vertical-align: middle;
+        display: inline;
+    }
 
 .img-container {
     margin: auto;
@@ -29,7 +46,6 @@
         vertical-align: middle;
         object-fit: fill;
     }
-
 
 
     @media (max-width: 715px) {
@@ -80,22 +96,7 @@
     padding: 2px 5px;
 }
 
-.group-activity {
-    position: absolute;
-    z-index: 3;
-    right: 12px;
-    top: 35%;
-    float: right;
-    display: inline-flex;
-}
 
-    .group-activity .notification .bx {
-        position: relative;
-        font-size: 30px;
-        font-weight: 200 !important;
-        vertical-align: middle;
-        display: inline;
-    }
 
 .cosplay-stats {
     justify-items: center;
