@@ -3,18 +3,44 @@ body {
     color: var(--cosgear-5);
     font-size: 16px;
     padding: 8px;
-    scrollbar-width: none; ;
+    scrollbar-width: none;
 }
 
 .header {
     position: sticky;
     top: 1%;
-    padding-top: 16px;
+    padding-top: 8px;
     height: fit-content;
-    padding: 0px 8px;
     background: var(--cosgear-1);
     vertical-align: middle;
 }
+
+    .header .nav-underline {
+        width: 100%;
+        justify-content: space-between;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 8px;
+    }
+
+        .header .nav-underline .nav-link {
+            color: var(--cosgear-5);
+        }
+
+            .header .nav-underline .nav-link .bx {
+                font-size: 18px;
+            }
+
+            .header .nav-underline .nav-link.active {
+                color: var(--cosgear-5);
+                border-bottom: 2px solid var(--cosgear-2);
+            }
+
+    .header .top-nav {
+        position: sticky;
+        background: var(--cosgear-1);
+        border-bottom: 1px solid grey;
+    }
 
     .header i {
         font-size: 24px;
@@ -59,11 +85,6 @@ body {
         background-color: var(--cosgear-4);
     }
 
-.top-nav {
-    position: sticky;
-    background: var(--cosgear-1);
-}
-
 .scroll-container {
     max-height: 85vh;
     overflow-y: auto;
@@ -73,27 +94,7 @@ body {
         padding: 0;
     }
 
-.nav-underline {
-    max-width: 100vw;
-    padding: 8px;
-    justify-content: space-between;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 8px;
-    border-bottom: 1px solid grey;
-}
 
-    .nav-underline .nav-link {
-        color: var(--cosgear-5);
-    }
-
-        .nav-underline .nav-link .bx {
-            font-size: 18px;
-        }
-        .nav-underline .nav-link.active {
-            color: var(--cosgear-5);
-            border-bottom: 2px solid var(--cosgear-2);
-        }
 
 /* Back To Top Button */
 .myBtn {
