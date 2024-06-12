@@ -19,6 +19,7 @@
     @{
         await Html.RenderPartialAsync("Modals/InviteUser");
         await Html.RenderPartialAsync("Modals/AboutGroup");
+        await Html.RenderPartialAsync("Modals/Notifications");
     }
 </partial>
 <!-- Top Header Area -->
@@ -38,7 +39,7 @@
         </button>
 
         <!-- Group Notifications-->
-        <button type="button" class="action" data-bs-toggle="modal" data-bs-target="#inviteUserModal">
+        <button type="button" class="action" data-bs-toggle="modal" data-bs-target="#groupNotificationsModal">
             <i class='bx bx-bell'></i>
         </button>
         
