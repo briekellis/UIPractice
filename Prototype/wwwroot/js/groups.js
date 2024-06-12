@@ -110,3 +110,24 @@ function userSelected() {
     console.log(userInvite.value);
     dismissMe.dismiss();
 }
+
+function markAllAsRead() {
+    var clearMe = document.getElementById('notificationsContainer');
+    var parentCont = clearMe.parentNode;
+
+    clearMe.remove();
+
+    var newCont = document.createElement('div');
+    newCont.id = 'notificationsContainer';
+    parentCont.appendChild(newCont);
+
+    // TODO: Implement Ajax call to clear notifications from database
+
+}
+
+function dismissNotification(control) {
+    var dismissMe = control.parentNode.parentNode;
+    console.log(dismissMe);
+
+    dismissMe.remove();
+}

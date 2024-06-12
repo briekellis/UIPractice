@@ -1,0 +1,49 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    int groupNumber = 12; 
+    Random rnd = new Random();
+}
+
+<link rel="stylesheet" href="~/css/modal.css" />
+<link rel="stylesheet" href="~/css/notification.css" />
+
+<!-- Modal -->
+<div class="modal fade" id="groupNotificationsModal" tabindex="-1" aria-labelledby="inviteUserModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">Invite User to Group</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+
+                <section class="scroll-container" id="notificationsContainer">
+
+                    <!-- Group Lists -->
+                    @for (int i = 0; i < groupNumber; i++)
+                    {
+                        var imgPath = "https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava" + rnd.Next(1, 5) + "-bg.webp";
+
+                        <div class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+                            <div class="toast-header">
+                                <strong class="me-auto">[Activity Type]</strong>
+                                <small>11 mins ago</small>
+                                <button type="button" class="btn-close" data-bs-dismiss="toast" onclick="dismissNotification(this)" aria-label="Close"></button>
+                            </div>
+                            <div class="toast-body">
+                                <img src=@imgPath class="rounded me-2" alt="...">
+                                @@username did something so here is a message
+                            </div>
+                        </div>
+                    }
+
+                </section>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-cosgear" onclick="markAllAsRead()">Mark All As Read</button>
+            </div>
+        </div>
+    </div>
+</div>

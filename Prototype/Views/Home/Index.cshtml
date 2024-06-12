@@ -17,17 +17,18 @@
         <div class="mb-0">
             <h1 class="d-inline"> <i class='bx bx-group'></i> Groups</h1>
 
-            <!-- Button trigger modal -->
+            <!-- Create Group Button -->
             <button type="button" class="action" data-bs-toggle="modal" data-bs-target="#createGroupModal">
                 <i class='bx bx-plus-circle'></i>
             </button>
-            <button type="button" class="action position-relative">
+
+            <!-- Group Notifications -->
+            <button type="button" class="action position-relative" data-bs-toggle="modal" data-bs-target="#groupNotificationsModal">
                 <i class='bx bx-bell'>
                     <span class="position-absolute top-0 start-75 translate-middle p-1 bg-danger rounded-circle">
                         <span class="visually-hidden">New alerts</span>
                     </span>
                 </i>
-
             </button>
         </div>
 
@@ -58,6 +59,7 @@
         <partial>
             @{
                 await Html.RenderPartialAsync("Modals/CreateGroup");
+                await Html.RenderPartialAsync("Modals/Notifications");
             }
         </partial>
     </section>

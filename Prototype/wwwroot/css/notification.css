@@ -1,0 +1,20 @@
+﻿#notificationsContainer {
+    max-height: 60vh;
+    overflow-y: auto;
+}
+
+    #notificationsContainer .toast {
+        display: block;
+        background: var(--cosgear-1);
+        color: var(--cosgear-5);
+        width: 100%;
+    }
+
+        #notificationsContainer .toast .toast-header {
+            background: var(--cosgear-3);
+            color: var(--cosgear-5);
+        }
+        #notificationsContainer .toast .toast-body img {
+            height: 20px;
+            width: 20px;
+        }
