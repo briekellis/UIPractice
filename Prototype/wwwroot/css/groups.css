@@ -119,7 +119,8 @@ body {
 
 /* Toolbar Styling */
 .toolbar {
-    margin: 8px;
+    margin-top: 16px;
+    margin-bottom: 4px;
     margin-left: auto;
     margin-right: auto;
     text-align: left;
