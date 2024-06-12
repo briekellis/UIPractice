@@ -24,19 +24,14 @@
         padding: 4px;
     }
 
-#groupsContainer #toolbar {
+/*#groupsContainer .toolbar {
     width: 100%;
     display: inline-flex;
 }
 
-    #groupsContainer #toolbar #groupSearch {
-        max-width: 75%;
-        margin-right: 12px
-    }
-
-    #groupsContainer #toolbar .dropdown {
+    #groupsContainer .toolbar .dropdown {
         max-width: 25%;
-    }
+    }*/
 
 .group-stats .bx {
     font-size: 20px;

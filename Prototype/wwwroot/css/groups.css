@@ -129,6 +129,7 @@ body {
     margin-right: auto;
     text-align: left;
     display: inline-flex;
+    width: 100%;
 }
 
     .toolbar .bx {
@@ -141,6 +142,8 @@ body {
         display: inline-block;
         border-radius: 8px;
         color: var(--cosgear-1);
+        margin-right: 4px;
+        margin-left: 4px;
     }
 
     .toolbar .dropdown-content {
@@ -166,21 +169,26 @@ body {
             display: block;
         }
 
-#toolbar .dropdown a:hover {
-    background-color: #ddd;
-}
+    .toolbar .dropdown a:hover {
+        background-color: #ddd;
+    }
 
-.toolbar .dropdown-content .dropdown-filters {
-    padding: 8px;
-}
+    .toolbar .dropdown-content .dropdown-filters {
+        padding: 8px;
+    }
 
-.toolbar .dropdown-content .scroll-container {
-    max-height: 100px;
-    overflow-x: auto;
-    border: 1px solid var(--cosgear-1);
-    padding: 4px;
-    border-radius: 8px;
-}
+    .toolbar .dropdown-content .scroll-container {
+        max-height: 100px;
+        overflow-x: auto;
+        border: 1px solid var(--cosgear-1);
+        padding: 4px;
+        border-radius: 8px;
+    }
+
+    .toolbar .input-group {
+        margin-left: 4px;
+        margin-right: 4px;
+    }
 
 .show {
     display: block !important;
