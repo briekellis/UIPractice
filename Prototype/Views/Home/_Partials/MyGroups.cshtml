@@ -11,20 +11,14 @@
 <section class="scroll-container" onscroll="scrollFunction('groupsContainer')" id="groupsContainer">
 
     <!-- Mid Level Tools -->
-    <div id="toolbar">
+    <div class="toolbar">
 
-        <!-- Search -->
-        <div class="input-group" id="groupSearch">
-            <span class="input-group-text"><i class='bx bx-search'></i></span>
-            <input type="text" class="form-control" aria-label="Search Groups">
-        </div>
-
-        <!-- Example single danger button -->
-        <div class="dropdown dropstart">
+        <!-- Dropdown Control -->
+        <div class="dropdown ">
             <button onclick="toggleDropdown('groupsFilters')" class="btn btn-cosgear text-center">
                 <i class='bx bx-filter-alt'></i>
             </button>
-            <div id="groupsFilters" class="dropdown-content" style="right: 5%;">
+            <div id="groupsFilters" class="dropdown-content">
 
                 <!-- Order By -->
                 <div class="dropdown-filters">
@@ -63,6 +57,12 @@
                 </div>
             </div>
         </div>
+
+        <!-- Search Bar -->
+        <div class="input-group" id="groupSearch">
+            <span class="input-group-text"><i class='bx bx-search'></i></span>
+            <input type="text" class="form-control" aria-label="Search Groups">
+        </div>       
 
     </div>
 

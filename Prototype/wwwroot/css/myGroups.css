@@ -32,13 +32,19 @@
         display: inline;
     }
 
-.img-container {
-    margin: auto;
-    float: left;
-    margin-right: 1em;
-    height: 120px;
-    width: 120px;
+.modal-body img {
+    max-height: 150px;
+    width: auto;
+    border-radius: 8px;
 }
+
+    .img-container {
+        margin: auto;
+        float: left;
+        margin-right: 1em;
+        height: 120px;
+        width: 120px;
+    }
 
     .img-container img {
         height: 100%;

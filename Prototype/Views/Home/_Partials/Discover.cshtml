@@ -2,7 +2,7 @@
     For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 *@
 @{
-    int groupNumber = 12;
+    int groupNumber = 4;
     Random rnd = new Random();
 }
 <head>
@@ -11,7 +11,7 @@
 <section class="scroll-container" onscroll="scrollFunction('discoverContainer')" id="discoverContainer">
 
     <!-- Mid Level Tools -->
-    <div id="toolbar">
+    <div class="toolbar">
 
         <!-- Search -->
         <div class="input-group" id="discoverSearch">
@@ -24,6 +24,8 @@
     <div class="container groupList">
         @for (int i = 0; i < groupNumber; i++)
         {
+            int userCount = @rnd.Next(1, 50);
+
             <div class="card group-card">
                 <div class="card-body">
                     <a href="#" class="img-container">
@@ -35,16 +37,26 @@
                                 <h3>Group @i</h3>
                                 <div class="group-stats">
                                     <i class='bx bx-user-circle'></i>
-                                    @rnd.Next(1, 50)
+                                    @userCount
 
-                                    <i class='bx bx-lock-open-alt'></i>
-                                    Public
+                                    @if (userCount < 15)
+                                    {
+                                        <i class='bx bx-lock-open-alt'></i>
+                                        <span>Public</span>
+                                    }else
+                                    {
+                                        <i class='bx bx-lock-alt'></i>
+                                        <span>Private</span>
+                                    }
+
                                 </div>
                             </div>
                         </a>
                         <div class="group-activity">
                             <div class="notification">
-                                <i class='bx bx-info-circle'></i>
+                                <button class="btn btn-cosgear" data-bs-toggle="modal" data-bs-target="#aboutGroupModal">
+                                    <i class='bx bx-info-circle'></i>
+                                </button>
                             </div>
                         </div>
                     </div>
@@ -52,5 +64,11 @@
             </div>
         }
     </div>
+
+    <partial>
+        @{
+            await Html.RenderPartialAsync("Modals/AboutGroup");
+        }
+    </partial>
 
 </section>
