@@ -14,10 +14,7 @@
         <div class="modal-content">
             <div class="modal-header">
                 <h1 class="modal-title fs-5" id="exampleModalLabel">About Group</h1>
-                <div>
-                    <button type="button" class="btn-edit bx bx-edit"></button>
-                    <button type="button" class="btn-close align-middle" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
 
@@ -86,6 +83,18 @@
 
             </div>
             <div class="modal-footer">
+                <!-- Change button based on if the group is public or private -->
+                @if (checkMe > 5)
+                {
+                    <button type="button" class="btn btn-cosgear">Join Group</button>
+                }
+                else
+                {
+                    <button type="button" class="btn btn-cosgear">Request to Join Group</button>
+                }
+
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+
                 <!-- If the group is already joined, show this button -->
                 <button type="button" class="btn btn-outline-danger">Leave Group</button>
             </div>

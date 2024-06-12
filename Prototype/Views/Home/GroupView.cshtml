@@ -18,6 +18,7 @@
 <partial>
     @{
         await Html.RenderPartialAsync("Modals/InviteUser");
+        await Html.RenderPartialAsync("Modals/AboutGroup");
     }
 </partial>
 <!-- Top Header Area -->
@@ -39,6 +40,11 @@
         <!-- Group Notifications-->
         <button type="button" class="action" data-bs-toggle="modal" data-bs-target="#inviteUserModal">
             <i class='bx bx-bell'></i>
+        </button>
+        
+        <!-- Group Notifications-->
+        <button type="button" class="action" data-bs-toggle="modal" data-bs-target="#aboutGroupModal">
+            <i class='bx bx-info-circle'></i>
         </button>
 
     </div>
@@ -67,12 +73,6 @@
             <a class="nav-link d-grid justify-content-center" href="#" id="chat-tab" onclick="toggleActiveTab(this, 'chat')">
                 <i class='bx bx-conversation ms-auto me-auto'></i>
                 Chat
-            </a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link d-grid justify-content-center" href="#" id="about-tab" onclick="toggleActiveTab(this, 'about')">
-                <i class='bx bx-info-circle ms-auto me-auto'></i>
-                About
             </a>
         </li>
     </ul>
