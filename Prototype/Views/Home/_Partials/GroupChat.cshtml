@@ -4,10 +4,11 @@
 @{
     Random rnd = new Random();
 }
-<div class="chatMessages" id="chatMessages" onload="scrollToBottom()" onscroll="scrollThroughChat('chatMessages')">
-    <div class="container">
+<div class="chatMessages"">
+    <div class="container scroll-container" id="chatMessages">
         <div class="row d-flex justify-content-bottom">
-            <div class="col-md-8 col-lg-6 col-xl-4">
+            <div class="col" id="messageContainer">
+                <div class="post-ghost mb-3"><small class="me-auto ms-auto">--- Start of Chat History ---</small></div>
 
                 <!-- Incoming Chats -->
                 @for (int i = 0; i < 8; i++)
@@ -22,22 +23,6 @@
                             </p>
                         </div>
                     </div>
-                }
-
-                <!-- Outgoing Chat -->
-                <div class="d-flex flex-row mb-4 outgoing-chat">
-                    <div class="p-3 me-3 border message">
-                        <p class="small mb-0">
-                            Semper sociis magnis conubia sollicitudin auctor maecenas dui mauris varius.
-                        </p>
-                    </div>
-                    <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava6-bg.webp" alt="avatar 1">
-                </div>
-
-                <!-- Incoming Chats -->
-                @for (int i = 0; i < 6; i++)
-                {
-                    var imgPath = "https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava" + rnd.Next(1, 5) + "-bg.webp";
 
                     <div class="d-flex flex-row mb-4 incoming-chat">
                         <img src=@imgPath alt="avatar 1">
@@ -63,20 +48,46 @@
         </div>
     </div>
 </div>
-
 <!-- Scroll to Top Button -->
-<button onclick="scrollToBottom()" class="scrollBottom" title="Go to top">Jump to latest <i class='bx bxs-chevron-down'></i></button>
+<button onclick="scrollToBottom()" class="scrollBottom" id="chatJump" title="Go to top">Jump to latest <i class='bx bxs-chevron-down'></i></button>
 
-<div class="messageBox">
-    <div class="fileUploadWrapper">
-        <label for="file">
-            <i class='bx bx-plus-circle'></i>
-            <span class="tooltip">Add an image</span>
-        </label>
-        <input type="file" id="file" name="file" />
+<div>
+    <div class="messageBox">
+        <div class="fileUploadWrapper">
+            <label for="file">
+                <i class='bx bx-plus-circle'></i>
+                <span class="tooltip">Add an image</span>
+            </label>
+            <input type="file" id="file" name="file" />
+        </div>
+        <input required="" placeholder="Message..." type="text" id="messageInput" />
+        <button id="sendButton">
+            <i class='bx bx-send'></i>
+        </button>
     </div>
-    <input required="" placeholder="Message..." type="text" id="messageInput" />
-    <button id="sendButton">
-        <i class='bx bx-send'></i>
-    </button>
 </div>
+
+<script>
+    var scroller = document.getElementById('messageContainer');
+    var msgs = document.getElementById('chatMessages');
+    var jumpbtn = document.getElementById('chatJump');
+    var atBottom = false;
+
+    document.getElementById('chatMessages').addEventListener('scroll', function () {
+        //console.log('wheeeee');
+        console.log(scroller.scrollHeight); 
+        console.log(msgs.scrollHeight);
+        console.log(scroller.offsetHeight); 
+        console.log(scroller.scrollTop);
+        console.log(document.documentElement.scrollTop);
+
+        //console.log(scroller.scrollTop);
+        var canYouSeeMe = scroller.lastElementChild.checkVisibility();
+        //console.log('can you see me? ' + canYouSeeMe);
+    });
+
+    function scrollToBottom() {
+        scroller.lastElementChild.scrollIntoView(true);
+        atBottom = true;
+    }
+</script>

@@ -49,39 +49,3 @@ function scrollThroughChat(control) {
     }
 }
 
-function animateScroll(duration) {
-    var scrollableDiv = document.
-        getElementById('chatMessages');
-
-    var start = scrollableDiv.scrollTop;
-    var end = scrollableDiv.scrollHeight;
-    var change = end - start;
-    var increment = 20;
-
-    function easeInOut(currentTime, start, change, duration) {
-        // by Robert Penner
-        currentTime /= duration / 2;
-        if (currentTime < 1) {
-            return change / 2 * currentTime * currentTime + start;
-        }
-        currentTime -= 1;
-        return -change / 2 * (currentTime * (currentTime - 2) - 1) + start;
-    }
-
-    function animate(elapsedTime) {
-        elapsedTime += increment;
-        var position = easeInOut(elapsedTime, start, change, duration);
-        scrollableDiv.scrollTop = position;
-        if (elapsedTime < duration) {
-            setTimeout(function () {
-                animate(elapsedTime);
-            }, increment)
-        }
-    }
-    animate(0);
-}
-
-function scrollToBottom() {
-    var duration = 300 // Or however many milliseconds you want to scroll to last
-    animateScroll(duration);
-}

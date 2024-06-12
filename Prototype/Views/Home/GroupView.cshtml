@@ -1,6 +1,6 @@
 ﻿@{
     Layout = "_Layout";
-    ViewData["Title"] = "Privacy Policy";
+    ViewData["Title"] = "[GROUP NAME]";
 }
 
 <head>
@@ -110,7 +110,7 @@
     </div>
 
     <!-- Groups Resource Container -->
-    <div id="chat" class="tabcontent hide">
+    <div id="chat" class="tabcontent hide" style="max-height: 80vh;">
         <partial>
             @{
                 await Html.RenderPartialAsync("_Partials/GroupChat");

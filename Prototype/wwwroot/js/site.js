@@ -4,9 +4,8 @@
 // Write your JavaScript code.
 
 $(document).ready(function () {
-    console.log('DocumentReady');
+    //console.log('DocumentReady');
     var setActiveTab = localStorage.getItem('activeTab');
-    console.log(setActiveTab);
 
     if (setActiveTab != null) {
         setActiveTab = document.getElementById(setActiveTab);       
@@ -24,9 +23,10 @@ $(document).ready(function () {
         tabs[0].classList.toggle('hide');
         navLinks[0].click();
     }
+
+    scrollToBottom();
 })
 
 function setActiveTab(tabId) {
-    console.log(tabId);
     localStorage.setItem('activeTab', tabId);
 }

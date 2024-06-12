@@ -1,9 +1,10 @@
 ﻿.chatMessages {
     width: 100%;
-    max-height: 80vh;
+    max-height: 78vh;
     overflow-y: auto;
     margin: 8px auto;
     top: 0;
+    scrollbar-width: none;
 }
 
 .messageBox {
@@ -116,30 +117,36 @@
     width: 100%;
 }
 
-.incoming-chat img {
-    width: 45px;
-    height: 100%;
+    .incoming-chat img {
+        width: 45px;
+        height: 100%;
+    }
+
+    .incoming-chat .message {
+        width: 100%;
+        border-radius: 15px;
+        background-color: var(--cosgear-2);
+        color: var(--cosgear-1);
+    }
+
+.outgoing-chat {
+    float: right; 
+    right: 0;
 }
 
-.incoming-chat .message {
-    width: 100%;
-    border-radius: 15px;
-    background-color: var(--cosgear-2);
-    color: var(--cosgear-1);
-}
+    .outgoing-chat img {
+        width: 45px;
+        height: 100%;
+    }
 
-.outgoing-chat img {
-    width: 45px;
-    height: 100%;
-}
-
-.outgoing-chat .message {
-    border-radius: 15px;
-    background-color: var(--cosgear-5);
-    color: var(--cosgear-1);
-}
+    .outgoing-chat .message {
+        border-radius: 15px;
+        background-color: var(--cosgear-5);
+        color: var(--cosgear-1);
+    }
 
 .scrollBottom {
+    display: none;
     position: fixed;
     margin-left: auto;
     margin-right: auto;
