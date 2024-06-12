@@ -62,7 +62,7 @@
         <div class="input-group" id="groupSearch">
             <span class="input-group-text"><i class='bx bx-search'></i></span>
             <input type="text" class="form-control" aria-label="Search Groups">
-        </div>       
+        </div>
 
     </div>
 
@@ -89,18 +89,18 @@
                             </div>
                         </a>
                         <div class="group-activity">
-                            <div class="notification">
+                            <a class="notification" onclick="setActiveTab('chat-tab')" href="@Url.Action("GroupView", "Home")">
                                 <i class='bx bx-conversation'></i>
                                 <span class="position-absolute top-0 start-50 translate-middle p-2 bg-danger rounded-circle">
                                     <span class="visually-hidden">New alerts</span>
                                 </span>
-                            </div>
-                            <div class="notification">
+                            </a>
+                            <a class="notification" onclick="setActiveTab('feed-tab')" href="@Url.Action("GroupView", "Home")">
                                 <i class='bx bx-images'></i>
                                 <span class="position-absolute top-0 start-100 translate-middle p-2 bg-danger rounded-circle">
                                     <span class="visually-hidden">New alerts</span>
                                 </span>
-                            </div>
+                            </a>
                         </div>
                     </div>
                 </div>
